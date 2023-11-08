@@ -1,0 +1,672 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+/*
+    font-family: 'Handlee', cursive;
+    font-family: 'Montserrat', sans-serif;
+    color principal: #fa573a;
+    color azul: #21242e;
+*/
+
+html {
+    /* para generar animaciones de puntos ancla */
+    scroll-behavior: smooth;
+}
+
+:root {
+    --fuenteprincipal: 'Montserrat', sans-serif;
+    --fuentetitulos: 'Handlee', cursive;
+    --colorprincipal: #fa573a;
+    --colorsecundario: #21242e;
+    --margingrid: 1em;
+    --fontsize: 1em;
+    --anchomaximo: 1100px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: var(--anchomaximo);
+    margin: 0 auto;
+}
+
+body {
+    font-family: var(--fuenteprincipal);
+    font-size: var(--fontsize);
+}
+
+/* inicio header */
+
+header .nav-top {
+    background-color: var(--colorsecundario);
+    padding: 20px 0px;
+}
+
+header .nav-top .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .nav-top a {
+    color: var(--colorprincipal);
+    text-decoration: none;
+}
+
+header .nav-top a i {
+    font-size: 150%;
+}
+
+header .nav-top a span {
+    color: white;
+    display: none;
+}
+
+header nav {
+    padding: 20px;
+}
+
+header nav:after {
+    content: "";
+    height: 0;
+    display: block;
+    clear: both;
+}
+
+header .hamburguesa {
+    cursor: pointer;
+    float: right;
+    width: 1.875em;
+}
+
+header .hamburguesa div {
+    border-top: 2px solid #aaa;
+    margin-bottom: 0.625em;
+    /*10px */
+}
+
+header nav .logo {
+    max-width: 100px;
+    float: left;
+}
+
+header nav .menu {
+    padding-top: 60px;
+    text-align: center;
+}
+
+header nav .menu li a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    padding: 1.25em;
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+header nav .menu li:last-child a {
+    border-bottom: 0px;
+}
+
+header nav .menu li .activo, header nav .menu li a:hover {
+    color: var(--colorprincipal);
+}
+
+/* inicio footer */
+
+footer {
+    background-color: var(--colorsecundario);
+    padding: 20px 0px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--colorprincipal)
+}
+
+/* inicio de hero */
+
+.hero {
+    background-image: url('../images/fondo.jpg');
+    height: 60vh;
+    background-color: #777;
+    background-blend-mode: multiply;
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    display: flex;
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+}
+
+.hero h1 {
+    font-family: var(--fuentetitulos);
+    font-size: 2.25em;
+}
+
+.hero h2 {
+    color: var(--colorprincipal);
+    font-size: 1.25em;
+    margin: var(--margingrid) 0;
+}
+
+p {
+    font-size: 1.15em;
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--colorprincipal);
+    padding: 1.15em;
+    margin: var(--margingrid) 0;
+    color: white;
+    text-decoration: none;
+    border: 1px solid var(--colorprincipal);
+}
+
+.boton:hover {
+    background-color: transparent;
+    color: var(--colorprincipal);
+}
+
+.boton:hover i {
+    transition: transform 0.5s;
+    transform: translateX(5px) scale(1.20);
+}
+
+.hero .social {
+    display: flex;
+    width: 160px;
+    justify-content: space-between;
+}
+
+.hero .social a {
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+/* inicio main */
+
+main section {
+    padding: 2.125em 1.5em;
+}
+
+main section h2 {
+    color: black;
+    font-family: var(--fuentetitulos);
+    font-size: 2em;
+    text-align: center;
+}
+
+main section h2 span {
+    color: var(--colorprincipal);
+}
+
+main section .underline {
+    position: relative;
+    width: 100px;
+    margin: 0 auto;
+    color: var(--colorprincipal);
+    font-weight: bold;
+}
+
+main section .underline hr {
+    position: absolute;
+    top: -1px;
+    border-color: var(--colorprincipal);
+    width: 100%;
+}
+
+main section .underline span {
+    text-align: center;
+    display: block;
+}
+
+main section .grid {
+    display: grid;
+}
+
+main section .grid article {
+    border-bottom: 1px solid #aaa;
+    padding: 1.5em 0;
+}
+
+main section .grid article div .fas {
+    color: var(--colorprincipal);
+    font-size: 140%;
+    border: 1px solid var(--colorprincipal);
+    padding: 0.5em;
+}
+
+main section .grid article h3 {
+    font-weight: 700;
+    font-size: 110%;
+    margin: 10px 0px;
+}
+
+main section p {
+    color: #666;
+    line-height: 1.25;
+    margin-bottom: 0.5em;
+}
+
+.enlace {
+    text-decoration: none;
+    color: var(--colorprincipal);
+    font-weight: 700;
+}
+
+.fa-truck {
+    transform: rotateY(180deg);
+}
+
+main section:last-child {
+    padding-bottom: 90px;
+}
+
+main section .flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main section .flex .column {
+    margin: 1.5em 0;
+}
+
+main section .column h3 {
+    font-weight: 700;
+    font-size: 110%;
+}
+
+main section .column h4 {
+    margin: 1em 0;
+    color: var(--colorprincipal);
+}
+
+main section .column .imagen .marco {
+    border: 3px solid var(--colorprincipal);
+    transform: rotateZ(10deg);
+    transition: 1s;
+}
+
+main section .column .imagen .marco img {
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+main section .column .imagen:hover .marco, main section .column .imagen:hover img {
+    transform: rotateZ(0deg);
+}
+
+.flecha a {
+    display: block;
+    color: var(--colorprincipal);
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    font-size: 300%;
+}
+
+/* BLOG CSS */
+
+main .posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+main .posts article {
+    width: 47%;
+}
+
+main .posts article .image-wrapper {
+    position: relative;
+}
+
+main .posts article .image-wrapper>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--colorprincipal);
+}
+
+main .posts article .image-wrapper>div span {
+    display: block;
+    padding: 0.45rem 1rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+main .posts-container {
+    padding: 0.5em;
+    padding-bottom: 1.6em;
+}
+
+main .posts article h3 {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0.7em 0;
+}
+
+main .posts article .order-now:hover i {
+    transition: 0.5s;
+    transform: translateX(5px);
+}
+
+main .posts article a {
+    color: var(--colorprincipal);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main .posts article i {
+    color: var(--colorprincipal);
+    display: inline-block;
+    margin-left: 0.4em;
+}
+
+main .posts article p {
+    margin: 0.8em 0;
+    color: #777;
+}
+
+/* TEAM CSS */
+
+main .team-main {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 20px;
+}
+
+main .team-main article {
+    width: 100%;
+    margin: 10px;
+}
+
+main .teamcontainer {
+    position: relative;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+main .teamcontainer .team {
+    padding: 4%;
+    color: white;
+    width: 100%;
+    height: 100px;
+    font-size: 120%;
+    line-height: 140%;
+    font-weight: 700;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: 1s;
+}
+
+main .teamcontainer .team-data p {
+    color: white;
+}
+
+main .teamcontainer .team hr {
+    width: 10%;
+    border-color: var(--colorprincipal);
+}
+
+main .teamcontainer .team .cargo {
+    font-size: 70%;
+    font-weight: normal;
+}
+
+main .teamcontainer .team a {
+    margin-top: 30px;
+    padding: 0 10px;
+    display: inline-block;
+}
+
+main .teamcontainer .team a i {
+    font-size: 1em;
+    font-weight: normal;
+    border: 1px solid white;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding-top: 22%;
+}
+
+main .teamcontainer:hover .team {
+    height: 100%;
+    transition: 1s;
+}
+
+main .teamcontainer:hover .team .team-data {
+    margin-top: 55%;
+    transition: 1s;
+}
+
+main .teamcontainer .team .team-data {
+    transition: 1s;
+}
+
+/* menu css */
+
+main #menu {
+    background-color: var(--colorsecundario);
+    color: white;
+    height: 100%;
+}
+
+main #menu p {
+    color: white;
+}
+
+main #menu h2 {
+    color: white
+}
+
+main #menu .underline {
+    margin-bottom: 20px;
+}
+
+main #menu .active {
+    border-radius: 4px;
+    background-color: var(--colorprincipal);
+}
+
+main #menu .container ul {
+    margin-bottom: 2em;
+}
+
+main #menu .container ul li {
+    padding: 0.8em 1em;
+    cursor: pointer;
+}
+
+main #menu .container h3 {
+    font-weight: bold;
+}
+
+main #menu .container h3+hr {
+    width: 3em;
+    height: 0;
+    margin-left: 0;
+    border: none;
+    border-bottom: 2px solid var(--colorprincipal);
+}
+
+main .meals article {
+    margin-top: 2em;
+}
+
+main .meals article header {
+    margin: 1em 0;
+}
+
+main .meals article header h3 {
+    display: inline-block;
+}
+
+main .meals article header span {
+    display: inline-block;
+    font-weight: bold;
+    color: var(--colorprincipal)a;
+    padding: 0.5em;
+}
+
+main section p {
+    font-size: 0.9em;
+}
+
+main .meals .order-now {
+    color: var(--colorprincipal);
+    padding: 1.5em 0;
+}
+
+main .meals .order-now a {
+    font-size: 0.9em;
+    color: var(--colorprincipal);
+    text-decoration: none;
+}
+
+main .meals .order-now:hover i {
+    transition: transform 0.5s;
+    transform: translateX(5px);
+}
+
+@media(min-width: 600px) {
+    main section .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    main section .grid article:last-child {
+        grid-column: 1/3;
+    }
+    main section .grid article {
+        border-bottom: 0px;
+        padding: 1.5em;
+        border-left: 1px solid #aaa;
+        margin-top: 1em;
+    }
+    main section .flex .column {
+        width: 50%;
+        padding: 0 1.5em;
+    }
+    main .team-main article {
+        width: calc(50% - 20px);
+        margin: 10px;
+    }
+}
+
+@media(min-width: 768px) {
+    header .nav-top a span {
+        display: inline;
+    }
+    header .nav-top a span {
+        font-size: 120%;
+    }
+    header .nav-top .container {
+        justify-content: space-between;
+    }
+    footer {
+        text-align: left;
+    }
+    main section .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    main section .grid article:last-child {
+        grid-column: 3/4;
+    }
+    main .team-main article {
+        width: calc(33.333% - 20px);
+        margin: 10px;
+    }
+}
+
+@media(min-width: 1004px) {
+    header .hamburguesa {
+        display: none;
+    }
+    header nav .menu {
+        padding-top: 0;
+        float: right;
+    }
+    header nav .menu li {
+        display: inline-block;
+    }
+    header nav .menu li a {
+        padding: 0.5em 0 1.25em 1.25em;
+        border-bottom: 0px;
+    }
+    main .posts article {
+        width: 31%;
+    }
+    main .posts-container {
+        padding: 0.5em 1em 1.6em 1em;
+    }
+    main .posts article h3 {
+        font-size: 1.2em;
+    }
+    main .posts article a, main .posts article p {
+        font-size: 0.9em;
+    }
+    main #menu {
+        height: 100%;
+        min-height: 80vh;
+    }
+    main .select-lunch-time {
+        width: 30%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    main .meals {
+        width: 69%;
+        /* no encaja bien con 70% */
+        display: inline-block;
+        margin: 0;
+        padding-left: 10%;
+    }
+    main .meals article {
+        display: flex;
+    }
+    /* image wrapper */
+    main .meals article div:first-child {
+        width: 35%;
+        max-width: 180px;
+        margin-right: 15px;
+    }
+    main .meals article header {
+        margin: 0 0 1.5em 0;
+        display: flex;
+    }
+    main .meals article header span {
+        padding: 0;
+        padding-left: 6px;
+    }
+}

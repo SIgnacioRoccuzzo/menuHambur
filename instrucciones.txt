@@ -1,0 +1,13 @@
+## vamos crear un menu de un restaurante.
+
+     - los datos van a ser los siguiente
+               - titulo plato
+               - breve descripcion
+               - precio
+               - foto: (url)
+               
+    
+    - Crear un array con 6 platos y pinteis.
+    - Cada plato tendrá un boton de borrar, cuando pulsemos en dicho boton se borrar primero de interfaz y luego del array. Si no hay platos mostrar mensaje pertinente.
+
+    CRUD - create read update delete 
